@@ -38,7 +38,6 @@ function heunMethod() {
 function llenarTabla(id, datos, met) {
   const tbody = document.getElementById(id);
   const metodoT = document.getElementById("metodoT");
-  const contenedorI = document.getElementById("contenedorI");
   const nuevaImagen = document.createElement("img");
   nuevaImagen.className = "w-1/2 mx-auto hover:scale-125 transition-transform";
   if (met == "rk4") {
@@ -48,8 +47,6 @@ function llenarTabla(id, datos, met) {
     metodoT.innerText = "Tabla de datos - Heun";
     nuevaImagen.src = "img/metodoHeun.png";
   }
-  contenedorI.innerHTML = "";
-  contenedorI.appendChild(nuevaImagen);
   tbody.innerHTML = "";
   for (const [t, N] of datos) {
     const fila = `<tr><td class='border px-2 text-center'>${t.toFixed(
@@ -64,7 +61,6 @@ function generarGrafica() {
   const heun = heunMethod();
   const rk4 = rk4Method();
   graficar(heun, rk4);
-  document.getElementById("miModal").classList.remove("hidden");
 }
 
 /* Disenio de la grafica de los dos metodos como comparacion*/
@@ -78,7 +74,7 @@ function graficar(datosHeun, datosRK4) {
         {
           label: "Heun",
           data: datosHeun.map(([, N]) => N),
-          borderColor: "rgb(59, 130, 246)",
+          borderColor: "rgb(250, 45, 18)",
           fill: false,
         },
         {
