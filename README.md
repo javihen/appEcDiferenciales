@@ -1,10 +1,10 @@
-##Metodos numericos
+## Metodos numericos
 
-###Aplicacion para resolver con ecuaciones diferenciales
+### Aplicacion para resolver con ecuaciones diferenciales
 
-####Univ. Javier quispe Pinto
+#### Univ. Javier quispe Pinto
 
-####Carrera de informatica
+#### Carrera de informatica
 
 ![img](img/index1.png)
 
